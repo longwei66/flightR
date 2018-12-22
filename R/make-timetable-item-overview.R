@@ -10,28 +10,33 @@
 #' @export
 #'
 #' @examples makeTimetableOverview(timetable)
-makeTimetableItemOverview <- function(timetable){
+makeTimetableItemOverview <- function(timetable.item = NULL){
     ## a simple function to replace a value by NA if NULL
     quickCheck <- function(x){ if(is.null(x)){ return(NA) } else { return(x) } }
     
     ## Return data 
-    return(
-        list(
-            "airliner" = flight$airline$name,
-            "airliner" = flight$airline$iataCode,
-            "flight.iata.number" = flight$flight$iataNumber,
-            "from.iata.code" = flight$departure$iataCode,
-            "from.scheduled.time" = quickCheck(flight$departure$scheduledTime),
-            "from.estimated.time" = quickCheck(flight$departure$estimatedTime),
-            "from.actual.time" = quickCheck(flight$departure$actualTime),
-            "to.iata.code" = flight$arrival$iataCode,
-            "to.scheduled.time" = quickCheck(flight$arrival$scheduledTime),
-            "to.estimated.time" = quickCheck(flight$arrival$estimatedTime),
-            "to.actual.time" = quickCheck(flight$arrival$actualTime),
-            "departure.delay" = quickCheck(flight$departure$delay),
-            "type" = flight$type,
-            "status" = flight$status,
-            "arrival.delay" = quickCheck(flight$arrival$delay)
-        )
-    )
+    if(is.null(timetable.item)){
+        item <- NULL
+    } else {
+        item <-
+            list(
+                "airliner" = timetable.item$airline$name,
+                "airliner.iata.code" = timetable.item$airline$iataCode,
+                "flight.iata.number" = timetable.item$flight$iataNumber,
+                "from.iata.code" = timetable.item$departure$iataCode,
+                "from.scheduled.time" = quickCheck(timetable.item$departure$scheduledTime),
+                "from.estimated.time" = quickCheck(timetable.item$departure$estimatedTime),
+                "from.actual.time" = quickCheck(timetable.item$departure$actualTime),
+                "to.iata.code" = timetable.item$arrival$iataCode,
+                "to.scheduled.time" = quickCheck(timetable.item$arrival$scheduledTime),
+                "to.estimated.time" = quickCheck(timetable.item$arrival$estimatedTime),
+                "to.actual.time" = quickCheck(timetable.item$arrival$actualTime),
+                "departure.delay" = quickCheck(timetable.item$departure$delay),
+                "type" = timetable.item$type,
+                "status" = timetable.item$status,
+                "arrival.delay" = quickCheck(timetable.item$arrival$delay)
+            )
+    }
+    
+    return(item)
 }
