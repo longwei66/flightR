@@ -6,20 +6,31 @@ Authors@R:
            family = "Long",
            role = c("aut", "cre"),
            email = "longwei66@gmail.com")
-Description: This package contains several functions to interract with aviation-edge
-    API. This covers dynamic data like flight tracker, Airport timetable, airline
+Description: This package contains several functions to interract with several
+	platform providing aviation API. For the moment, two platforms are supported :
+	aviation-edge and opensky. 
+	1) Aviation Edge (AE) covers dynamic data like flight tracker, Airport timetable, airline
     routes, nearby airports, autocomplete as well as more static data such as airports,
-    airlines, airplanes, cities, countries, taxes and aircraft types.
-    This package requires a valid API key, which is available for free with limitations. 
-    Premium packages start from 5$ for 30k calls per month. 
+    airlines, airplanes, cities, countries, taxes and aircraft types. This package
+    requires a valid API key from aviation-edge, which is available for free with
+    limitations, premium packages start from 5$ for 30k calls per month.
     See https://aviation-edge.com/developers/ for details.
-    The main Aviation Edge API for Developers
     "Aviation Edge database is divided between static and dynamic data. Static
     data is that what does not frequently change but due to the massive size
     of our database, there are constant updates. Think about airport and 
     airline information. The dynamic data is that what changes more frequently
     or uses our software to turn it into useful tools. Think about flight
     tracking and airport timetables."
+    2 ) OpenSky Network’s (OSN) live API lets you retrieve live airspace information
+    for research and non-commerical purposes (See terms and conditions). Information
+    is provided in the form of State Vectors, Airplanes seen by the OpenSky Network
+    are associated with flight state information derived from ADS-B and Mode S
+    messages. The state of an aircraft is a summary of all tracking information
+    (mainly position, velocity, and identity) at a certain point in time.
+    These states of aircraft can be retrieved as state vectors in the form
+    of a JSON object. Available API are : All State Vectors, Own State Vectors,
+    Flights in Time Interval, Flights by Aircraft, Arrivals by Airport, 
+    Departures by Airport, Track by Aircraft
 License: GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 Encoding: UTF-8
 LazyData: true

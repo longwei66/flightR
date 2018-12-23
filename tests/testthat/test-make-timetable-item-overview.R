@@ -126,13 +126,13 @@ arrived.flight.delay.answer <- jsonlite::fromJSON('
                                                   ')
 
 test_that("makeTimetableItemOverview handle missing input", {
-    expect_equal(makeTimetableItemOverview(timetable.item = NULL), NULL)
+    expect_equal(makeTimetableItemOverviewAE(timetable.item = NULL), NULL)
 })
 test_that("makeTimetableItemOverview handle arrived no delay flight", {
-    expect_equal(makeTimetableItemOverview(timetable.item = arrived.flight), arrived.flight.answer)
+    expect_equal(makeTimetableItemOverviewAE(timetable.item = arrived.flight), arrived.flight.answer)
 })
 test_that("makeTimetableItemOverview handle arrived delay flight", {
-    expect_equal(makeTimetableItemOverview(timetable.item = arrived.flight.delay), arrived.flight.delay.answer)
+    expect_equal(makeTimetableItemOverviewAE(timetable.item = arrived.flight.delay), arrived.flight.delay.answer)
 })
 
 

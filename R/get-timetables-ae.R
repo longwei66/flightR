@@ -1,4 +1,4 @@
-#' getFlightSchedulesTimetables
+#' getTimetablesAE
 #' 
 #' A function to get timetables of all flights departing or arrivingin a
 #' specific airport.
@@ -39,7 +39,7 @@
 #' @export
 #'
 #' @examples getFlightSchedulesTimetables(iata.code = "LIS", type = "arrival", api.key = "key.here)
-getFlightSchedulesTimetables <- function(iata.code="JFK",
+getTimetablesAE <- function(iata.code="JFK",
                                          type="departure", #"arrival"
                                          api.key){
     ## Define aviation-edge API URL
