@@ -12,3 +12,10 @@ report.to.belo <- data.table::rbindlist(lapply(flights.to.belo, makeTimetableIte
 
 flights.from.belo <- getFlightSchedulesTimetables(iata.code = "CNF", type = "departure", api.key = aviation.edge.api.key)
 report.from.belo <- data.table::rbindlist(lapply(flights.from.belo, makeTimetableItemOverview))
+
+
+flights.from.sh <- getFlightSchedulesTimetables(iata.code = "PVG", type = "departure", api.key = aviation.edge.api.key)
+report.from.sh <- data.table::rbindlist(lapply(flights.from.sh, makeTimetableItemOverview))
+
+sample.flight <- report.to.lis[status == "active", flight.iata.number][2]
+getFlightTracker(flightIata=sample.flight,api.key = aviation.edge.api.key)
