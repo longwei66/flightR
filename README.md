@@ -1,5 +1,16 @@
 # flightR
-A package to deal with flight status data and related ....
+
+## Overview
+
+### What is flightR
+
+A package to deal with flight status data and related information.
+Currently two sources are used, the REST API of [Aviation Edge](https://aviation-edge.com/developers/) & [OpenSky Network]()
+
+### How to install flightR
+
+`devtools::install_github(repo = "https://github.com/longwei66/flightR")`
+
 
 ## Aviation Edge API
 

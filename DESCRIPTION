@@ -1,6 +1,6 @@
 Package: flightR
 Title: A package to interract with aviation-edge.com API
-Version: 0.0.0.0009
+Version: 0.0.0.0019
 Authors@R: 
     person(given = "Wei",
            family = "Long",
@@ -30,7 +30,8 @@ Description: This package contains several functions to interract with several
     These states of aircraft can be retrieved as state vectors in the form
     of a JSON object. Available API are : All State Vectors, Own State Vectors,
     Flights in Time Interval, Flights by Aircraft, Arrivals by Airport, 
-    Departures by Airport, Track by Aircraft
+    Departures by Airport, Track by Aircraft. See https://opensky-network.org/apidoc/index.html
+    for details
 License: GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007
 Encoding: UTF-8
 LazyData: true
