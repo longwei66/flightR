@@ -22,29 +22,29 @@
 #' 
 #' @export
 #'
-#' @examples getArrivalsByAirportOSN(iata.code = "LFPG", from.time = "2018-01-29 00:00:00", to.time = "2018-01-29 01:00:00", login = "login", password = "my pasword")
+#' @examples getArrivalsByAirportOSN(icao.code = "LFPG", from.time = "2018-01-29 00:00:00", to.time = "2018-01-29 01:00:00", login = "login", password = "my pasword")
 getArrivalsByAirportOSN <- function(icao.code="JFK",
-									from.time,
-									to.time,
-									login,
-									password){
-    
-	## Define aviation-edge API URL
-    url.base <- paste0("https://",login,":",password,"@opensky-network.org/api/flights/arrival?")
-    url.airport <- paste0("airport=",iata.code)
-    url.from.time <- paste0("&begin=",as.integer(as.POSIXct(from.time)))
-    url.to.time <- paste0("&end=",as.integer(as.POSIXct(to.time)))
-    
-    url <- paste0(url.base, url.airport, url.from.time, url.to.time)
-    message(url)
-    
-    ## GET request
-    request <- GET(url)
-    stop_for_status(request)
-    if(status_code(request) == 200){
-        answer <- content(request, "parsed", "application/json", encoding="UTF-8")
-    } else {
-        answer <- NULL
-    }
-    return(answer)
+                                    from.time,
+                                    to.time,
+                                    login,
+                                    password){
+        
+        ## Define aviation-edge API URL
+        url.base <- paste0("https://",login,":",password,"@opensky-network.org/api/flights/arrival?")
+        url.airport <- paste0("airport=",icao.code)
+        url.from.time <- paste0("&begin=",as.integer(as.POSIXct(from.time)))
+        url.to.time <- paste0("&end=",as.integer(as.POSIXct(to.time)))
+        
+        url <- paste0(url.base, url.airport, url.from.time, url.to.time)
+        message(url)
+        
+        ## GET request
+        request <- GET(url)
+        stop_for_status(request)
+        if(status_code(request) == 200){
+                answer <- content(request, "parsed", "application/json", encoding="UTF-8")
+        } else {
+                answer <- NULL
+        }
+        return(answer)
 }
