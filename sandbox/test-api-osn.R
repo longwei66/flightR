@@ -10,7 +10,7 @@ LFPG.1 <- getArrivalsByAirportOSN(icao.code = "LFPG",
                                 password = my.osn.password)
 
 LFPG.2 <- getArrivalsByAirportOSN(icao.code = "LFPG",
-                                  from.time = "2018-12-24 00:00:00",
-                                  to.time = "2018-12-24 01:00:00",
+                                  from.time = "2018-12-24 20:00:00",
+                                  to.time = "2018-12-24 21:00:00",
                                   login = my.osn.login,
                                   password = my.osn.password)
