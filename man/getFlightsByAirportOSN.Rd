@@ -38,4 +38,6 @@ getFlightsByAirportOSN(icao.code = "LFPG", type = "arrival", from.time = "2018-0
 https://www.world-airport-codes.com/
 
 https://opensky-network.org/apidoc/rest.html#arrivals-by-airport
+
+https://opensky-network.org/apidoc/rest.html#departures-by-airport
 }

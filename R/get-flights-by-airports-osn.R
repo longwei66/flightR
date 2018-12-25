@@ -16,6 +16,7 @@
 #'
 #' @seealso https://www.world-airport-codes.com/
 #' @seealso https://opensky-network.org/apidoc/rest.html#arrivals-by-airport
+#' @seealso https://opensky-network.org/apidoc/rest.html#departures-by-airport
 #' 
 #' @import httr
 #' @return The response is a JSON array of flights where each flight is an object with properties
