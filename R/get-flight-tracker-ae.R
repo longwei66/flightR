@@ -49,7 +49,12 @@
 #' @return answer a json object containing flights list with status and details
 #' @export
 #'
-#' @examples getFlightSchedulesTimetables(iata.code = "LIS", type = "arrival", api.key = "key.here)
+#' @examples
+#' \dontrun{
+#' getFlightSchedulesTimetables(iata.code = "LIS",
+#'                              type = "arrival",
+#'                              api.key = "key.here)
+#' }
 getFlightTrackerAE <- function(
     depIata= NULL,# Departure airport IATAcode
     depIcao= NULL,# Departure airport ICAO code

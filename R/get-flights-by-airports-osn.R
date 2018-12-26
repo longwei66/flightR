@@ -9,10 +9,11 @@
 
 #'
 #' @param icao.code ICAO code of the airport 
+#' @param type either arrival or departure
 #' @param from.time Start of time interval to retrieve flights as "YYYY-MM-DD HH:MM:SS"
 #' @param to.time End of time interval to retrieve flights as "YYYY-MM-DD HH:MM:SS"
-#' @param login 
-#' @param password 
+#' @param login osn valid login
+#' @param password osn valid password
 #'
 #' @seealso https://www.world-airport-codes.com/
 #' @seealso https://opensky-network.org/apidoc/rest.html#arrivals-by-airport
@@ -23,7 +24,14 @@
 #' 
 #' @export
 #'
-#' @examples getFlightsByAirportOSN(icao.code = "LFPG", type = "arrival", from.time = "2018-01-29 00:00:00", to.time = "2018-01-29 01:00:00", login = "login", password = "my pasword")
+#' @examples 
+#' \dontrun{
+#' getFlightsByAirportOSN(icao.code = "LFPG",
+#'                        type = "arrival",
+#'                        from.time = "2018-01-29 00:00:00",
+#'                        to.time = "2018-01-29 01:00:00",
+#'                        login = "login",
+#'                        password = "my pasword")
 getFlightsByAirportOSN <- function(icao.code="JFK",
                                     type = "arrival",
                                     from.time = "2018-12-24 20:00:00",

@@ -34,7 +34,13 @@
 #' 
 #' @export
 #'
-#' @examples getAllStateVectorsOSN(icao24 = NULL, time = "2018-01-29 00:00:00", login = "login", password = "my pasword")
+#' @examples
+#' \dontrun{
+#' getAllStateVectorsOSN(icao24 = NULL,
+#'                       time = "2018-01-29 00:00:00",
+#'                       login = "login",
+#'                       password = "my pasword")
+#' }
 getAllStateVectorsOSN <- function(icao24 = NULL,
                                   time = NULL,
                                   latitude.min = NULL,

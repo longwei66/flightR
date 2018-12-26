@@ -47,7 +47,12 @@ That means, if the time parameter was set to t, the API will return state vector
 for time t−(t mod 5).
 }
 \examples{
-getAllStateVectorsOSN(icao24 = NULL, time = "2018-01-29 00:00:00", login = "login", password = "my pasword")
+\dontrun{
+getAllStateVectorsOSN(icao24 = NULL,
+                      time = "2018-01-29 00:00:00",
+                      login = "login",
+                      password = "my pasword")
+}
 }
 \seealso{
 https://opensky-network.org/apidoc/rest.html#all-state-vectors

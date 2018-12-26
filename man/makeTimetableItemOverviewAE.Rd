@@ -7,7 +7,7 @@
 makeTimetableItemOverviewAE(timetable.item = NULL)
 }
 \arguments{
-\item{flight}{a list containing the airport timetable item (one flight)}
+\item{timetable.item}{a list containing the airport timetable item (one flight)}
 }
 \value{
 a list with main details of that file
@@ -17,8 +17,10 @@ A function which takes an airport timetable item (see getFlightSchedulesTimetabl
 and returnd a list containing the flight main metadata
 }
 \examples{
+\dontrun{
 makeTimetableOverview(timetable)
 }
+}
 \seealso{
-\code{\link{getFlightSchedulesTimetables}}
+\code{\link{getTimetablesAE}}
 }

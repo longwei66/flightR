@@ -38,7 +38,12 @@
 #' @return answer a json object containing flight list with status and details. Status can be: (landed, scheduled, cancelled, active, incident, diverted, redirected, unknown)
 #' @export
 #'
-#' @examples getFlightSchedulesTimetables(iata.code = "LIS", type = "arrival", api.key = "key.here)
+#' @examples 
+#' \dontrun{
+#' getFlightSchedulesTimetables(iata.code = "LIS",
+#'                              type = "arrival",
+#'                              api.key = "key.here)
+#' }
 getTimetablesAE <- function(iata.code="JFK",
                                          type="departure", #"arrival"
                                          api.key){

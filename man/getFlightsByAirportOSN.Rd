@@ -11,13 +11,15 @@ getFlightsByAirportOSN(icao.code = "JFK", type = "arrival",
 \arguments{
 \item{icao.code}{ICAO code of the airport}
 
+\item{type}{either arrival or departure}
+
 \item{from.time}{Start of time interval to retrieve flights as "YYYY-MM-DD HH:MM:SS"}
 
 \item{to.time}{End of time interval to retrieve flights as "YYYY-MM-DD HH:MM:SS"}
 
-\item{login}{}
+\item{login}{osn valid login}
 
-\item{password}{}
+\item{password}{osn valid password}
 }
 \value{
 The response is a JSON array of flights where each flight is an object with properties
@@ -30,9 +32,6 @@ interval - call to Opensky Network API
 Retrieve flights for a certain airport which arrived or departured within a given time 
 interval (begin, end). If no flights are found for the given period, 
 HTTP stats 404 - Not found is returned with an empty response body.
-}
-\examples{
-getFlightsByAirportOSN(icao.code = "LFPG", type = "arrival", from.time = "2018-01-29 00:00:00", to.time = "2018-01-29 01:00:00", login = "login", password = "my pasword")
 }
 \seealso{
 https://www.world-airport-codes.com/
