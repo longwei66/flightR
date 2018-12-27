@@ -7,6 +7,16 @@
 A package to deal with flight status data and related information.
 Currently two sources are used, the REST API of [Aviation Edge](https://aviation-edge.com/developers/) & [OpenSky Network]()
 
+### Available Services
+
+- Aviation Edge API (status: partial) - https://aviation-edge.com/developers/
+- Opensky network API (status: partial) - https://opensky-network.org/apidoc/#
+- Flightstats API (status: pending) - https://developer.flightstats.com/getting-started/
+- flightaware API (status: pending) - https://fr.flightaware.com/commercial/firehose/firehose_documentation.rvt
+- OAG API (status: pending) - https://www.oag.com/flightview/flight-status-data-api
+
+
+
 ### How to install flightR
 
 `devtools::install_github(repo = "https://github.com/longwei66/flightR")`
