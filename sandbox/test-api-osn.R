@@ -21,3 +21,10 @@ LFPG.2 <- getFlightsByAirportOSN(icao.code = "LFPG",
 bbox1 <- getAllStateVectorsOSN(latitude.min = 43, longitude.min = -3,
                                latitude.max = 50, longitude.max = 9,
                                login = my.osn.login, password = my.osn.password)
+
+myFlight <- getTrackByAircraftOSN(icao24 = '4b1809', time = 0, login = my.osn.login, password = my.osn.password)
+
+a <- data.table::rbindlist(myFlight$path)
+g <- ggplot(data = a)
+g <- g + geom_path(aes(x = latitude, y = longitude))
+g
