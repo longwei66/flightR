@@ -1,4 +1,4 @@
-#' getTimetablesAE
+#' getAEtimetables
 #' 
 #' A function to get timetables of all flights departing or arrivingin a
 #' specific airport.
@@ -40,13 +40,13 @@
 #'
 #' @examples 
 #' \dontrun{
-#' getFlightSchedulesTimetables(iata.code = "LIS",
+#' getAEtimetables(iata.code = "LIS",
 #'                              type = "arrival",
 #'                              api.key = "key.here)
 #' }
-getTimetablesAE <- function(iata.code="JFK",
-                                         type="departure", #"arrival"
-                                         api.key){
+getAEtimetables <- function(iata.code="JFK",
+                            type="departure", #"arrival"
+                            api.key){
     ## Define aviation-edge API URL
     url.base <- "http://aviation-edge.com/v2/public/timetable?"
     url.param <- paste0("key=",api.key,"&iataCode=",iata.code,"&type=",type)

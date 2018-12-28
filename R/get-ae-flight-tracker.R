@@ -1,4 +1,4 @@
-#' getFlightTrackerAE
+#' getAEflightTracker
 #' 
 #' A function to get information about all flights in the world with 
 #' 
@@ -51,11 +51,9 @@
 #'
 #' @examples
 #' \dontrun{
-#' getFlightSchedulesTimetables(iata.code = "LIS",
-#'                              type = "arrival",
-#'                              api.key = "key.here)
+#' getAEflightTracker(flightIata="AF1195",api.key = "key here")
 #' }
-getFlightTrackerAE <- function(
+getAEflightTracker <- function(
     depIata= NULL,# Departure airport IATAcode
     depIcao= NULL,# Departure airport ICAO code
     arrIata= NULL,# Arrival airport IATA code

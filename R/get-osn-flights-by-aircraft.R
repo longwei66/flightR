@@ -1,4 +1,4 @@
-#' getFlightsByAircraftOSN
+#' getOSNflightsByAircraft
 #' 
 #' Documentation from OpenSky Network API
 #' This API call retrieves flights for a particular aircraft within a certain 
@@ -23,12 +23,12 @@
 #'
 #' @examples 
 #' \dontrun{
-#' getFlightsByAircraftOSN(icao24 = "3c666b",
+#' getOSNflightsByAircraft(icao24 = "3c666b",
 #'                        from.time = "2018-01-29 00:00:00",
 #'                        to.time = "2018-01-29 01:00:00",
 #'                        login = "login",
 #'                        password = "my pasword")
-getFlightsByAircraftOSN <- function(icao24 = NULL,
+getOSNflightsByAircraft <- function(icao24 = NULL,
                                     from.time = NULL,
                                     to.time = NULL,
                                     login = NULL,

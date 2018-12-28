@@ -38,11 +38,11 @@ https://aviation-edge.com/developers/
 ### Api implemented in `flightR` package
 
 
-#### Flight Tracker API `flightR::getFlightTrackerAE()`
+#### Flight Tracker API `flightR::getAEflightTracker()`
 
 > Clients can connect to the flight tracking through the API key which gives direct access to all the live flight data. The flight tracker API allows clients to display within their applications or on their websites and other platforms, the actual tracking of flights including all their relevant information. This service is central to our aviation data and maintained constantly within our database. Since the data is live, the updates happen within short intervals of just a few minutes. Aviation Edge’s function is to gather and maintain the complete aviation data for our clients so that they can create the functional tools for their customers.
 
-#### Aiport Timetables API `flightR::getTimetablesAE`
+#### Aiport Timetables API `flightR::getAEtimetables()`
 
 > The API service provides the flight schedules and timetables of all airports and airlines around the world and maintains this for the clients in a central database, always accessible with the personal API key. The airport and airline timetables and schedules API is one of Aviation Edge’s core features. Making it easy for developers to provide their customers with actual airport departure and arrival times through API on their applications or websites. Our function is to gather and maintain the aviation data and format this into workable flight schedules and airport timetables for the clients so that they can focus on their core business of providing this information to their customers.
 
@@ -63,21 +63,21 @@ https://opensky-network.org/apidoc/#
 
 ### Api implemented in `flightR` package
 
-#### All State Vectors `flightR::getAllStateVectorsOSN()`
+#### All State Vectors `flightR::getOSNallStateVectors()`
 Retrieve any state vector of the OpenSky for a given time in the last hour, could be limited in a geographical bounding box
 
 #### Own State Vector
 This API will not be implemented in this project
 
-#### Flights by Aircraft `flightR::getFlightsByAircraftOSN()`
+#### Flights by Aircraft `flightR::getOSNflightsByAircraft()`
 This API call retrieves flights for a particular aircraft within a certain time interval. Resulting flights departed and arrived within [begin, end]. If no flights are found for the given period, HTTP stats 404 - Not found is returned with an empty response body.
 
-#### Arrivals / Departure by Airport `flightR::getFlightsByAirportOSN()`
+#### Arrivals / Departure by Airport `flightR::getOSNflightsByAirport()`
 
 Retrieve flights for a certain airport which arrived / departed within a given time interval.
 
 
-#### Track by Aircraft `flightR::getTrackByAircraftOSN()`
+#### Track by Aircraft `flightR::getOSNtrackByAircraft()`
 
 Retrieve the trajectory for a certain aircraft at a given time. The trajectory is a list of waypoints containing position, barometric altitude, true track and an on-ground flag.
 

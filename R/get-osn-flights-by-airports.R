@@ -1,4 +1,4 @@
-#' getFlightsByAirportOSN
+#' getOSNflightsByAirport
 #' 
 #' A function to get all arrival or departure flights in a specific airport in a given time
 #' interval - call to Opensky Network API
@@ -26,13 +26,13 @@
 #'
 #' @examples 
 #' \dontrun{
-#' getFlightsByAirportOSN(icao.code = "LFPG",
+#' getOSNflightsByAirport(icao.code = "LFPG",
 #'                        type = "arrival",
 #'                        from.time = "2018-01-29 00:00:00",
 #'                        to.time = "2018-01-29 01:00:00",
 #'                        login = "login",
 #'                        password = "my pasword")
-getFlightsByAirportOSN <- function(icao.code="JFK",
+getOSNflightsByAirport <- function(icao.code="JFK",
                                     type = "arrival",
                                     from.time = "2018-12-24 20:00:00",
                                     to.time = "2018-12-24 23:59:00",

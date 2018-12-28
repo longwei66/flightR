@@ -1,4 +1,4 @@
-#' getAllStateVectorsOSN
+#' getOSNallStateVectors
 #' 
 #' A function to get all available details of flights by plane icao transponder adress
 #' at a specific time - call to Opensky Network API.
@@ -36,12 +36,12 @@
 #'
 #' @examples
 #' \dontrun{
-#' getAllStateVectorsOSN(icao24 = NULL,
+#' getOSNallStateVectors(icao24 = NULL,
 #'                       time = "2018-01-29 00:00:00",
 #'                       login = "login",
 #'                       password = "my pasword")
 #' }
-getAllStateVectorsOSN <- function(icao24 = NULL,
+getOSNallStateVectors <- function(icao24 = NULL,
                                   time = NULL,
                                   latitude.min = NULL,
                                   longitude.min = NULL,

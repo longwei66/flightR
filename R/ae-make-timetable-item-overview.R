@@ -1,4 +1,4 @@
-#' makeTimetableItemOverviewAE
+#' AEmakeTimetableItemOverview
 #' 
 #' A function which takes an airport timetable item (see getFlightSchedulesTimetables)
 #' and returnd a list containing the flight main metadata
@@ -11,9 +11,9 @@
 #'
 #' @examples 
 #' \dontrun{
-#' makeTimetableOverview(timetable)
+#' AEmakeTimetableItemOverview(timetable)
 #' }
-makeTimetableItemOverviewAE <- function(timetable.item = NULL){
+AEmakeTimetableItemOverview <- function(timetable.item = NULL){
     ## a simple function to replace a value by NA if NULL
     quickCheck <- function(x){ if(is.null(x)){ return(NA) } else { return(x) } }
     

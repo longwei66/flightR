@@ -1,6 +1,6 @@
 Package: flightR
 Title: A package to interract with aviation-edge.com API
-Version: 0.0.0.0019
+Version: 0.0.0.0029
 Authors@R: 
     person(given = "Wei",
            family = "Long",
@@ -41,8 +41,8 @@ Depends:
 Suggests: 
     testthat
 Collate: 
-    'get-all-state-vectors-osn.R'
-    'get-flight-tracker-ae.R'
-    'get-flights-by-airports-osn.R'
-    'get-timetables-ae.R'
-    'make-timetable-item-overview-ae.R'
+    'get-osn-all-state-vectors.R'
+    'get-ae-flight-tracker.R'
+    'get-osn-flights-by-airports.R'
+    'get-ae-timetables.R'
+    'ae-make-timetable-item-overview.R'

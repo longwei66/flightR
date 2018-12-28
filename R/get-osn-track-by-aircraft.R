@@ -1,4 +1,4 @@
-#' getTrackByAircraftOSN
+#' getOSNtrackByAircraft
 #' 
 #' Documentation from OpenSky Network API
 #' Retrieve the trajectory for a certain aircraft at a given time. 
@@ -40,14 +40,14 @@
 #'
 #' @examples 
 #' \dontrun{
-#' getTrackByAircraftOSN(icao24 = "3c666b",
+#' getOSNtrackByAircraft(icao24 = "3c666b",
 #'                        time = 0",
 #'                        login = "login",
 #'                        password = "my pasword")
-getTrackByAircraftOSN <- function(icao24 = NULL,
-                                    time = 0,
-                                    login = NULL,
-                                    password = NULL){
+getOSNtrackByAircraft <- function(icao24 = NULL,
+                                  time = 0,
+                                  login = NULL,
+                                  password = NULL){
         
         ## Test if login & password are provided
         if(is.null(login) | is.null(password)){
@@ -62,8 +62,8 @@ getTrackByAircraftOSN <- function(icao24 = NULL,
         
         ## Define OpenSky API URL
         url.base <- paste0("https://",login,":",password,"@opensky-network.org/api/tracks/all?")
-                
-
+        
+        
         url.icao24 <- paste0("icao24=",icao24)
         if(time == 0) {
                 url.time <- "&time=0"
@@ -73,7 +73,7 @@ getTrackByAircraftOSN <- function(icao24 = NULL,
         
         url <- paste0(url.base, url.icao24, url.time)
         message(url)
-                
+        
         ## GET request
         request <- GET(url)
         stop_for_status(request)
