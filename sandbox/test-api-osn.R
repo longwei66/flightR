@@ -22,7 +22,7 @@ bbox1 <- getAllStateVectorsOSN(latitude.min = 43, longitude.min = -3,
                                latitude.max = 50, longitude.max = 9,
                                login = my.osn.login, password = my.osn.password)
 
-myTrack <- getTrackByAircraftOSN(icao24 = '406b8e', time = 0, login = my.osn.login, password = my.osn.password)
+myTrack <- getTrackByAircraftOSN(icao24 = '392af1', time = 0, login = my.osn.login, password = my.osn.password)
 
 a <- data.table::rbindlist(myFlight$path)
 g <- ggplot(data = a)

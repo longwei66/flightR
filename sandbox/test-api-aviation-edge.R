@@ -14,12 +14,12 @@ flights.from.belo <- getFlightSchedulesTimetables(iata.code = "CNF", type = "dep
 report.from.belo <- data.table::rbindlist(lapply(flights.from.belo, makeTimetableItemOverviewAE))
 
 
-flights.from.cdg <- getFlightSchedulesTimetables(iata.code = "PVG", type = "departure", api.key = aviation.edge.api.key)
-report.from.cdg <- data.table::rbindlist(lapply(flights.from.cdg, makeTimetableItemOverviewAE))
+flights.to.cdg <- getTimetablesAE(iata.code = "CDG", type = "arrival", api.key = aviation.edge.api.key)
+report.to.cdg <- data.table::rbindlist(lapply(flights.to.cdg, makeTimetableItemOverviewAE))
 
 sample.flight <- report.to.lis[status == "active", flight.iata.number][2]
-getFlightTracker(flightIata=sample.flight,api.key = aviation.edge.api.key)
+getFlightTrackerAE(flightIata=sample.flight,api.key = aviation.edge.api.key)
 
 
-sample.flight <- flights.from.lis[, flight.iata.number = "U23762"]
-getFlightTracker(flightIata="U23762",api.key = aviation.edge.api.key)
+
+test <- getFlightTrackerAE(flightIata="AF1195",api.key = aviation.edge.api.key)
