@@ -2,8 +2,10 @@
 
 export(getAllStateVectorsOSN)
 export(getFlightTrackerAE)
+export(getFlightsByAircraftOSN)
 export(getFlightsByAirportOSN)
 export(getTimetablesAE)
 export(getTrackByAircraftOSN)
 export(makeTimetableItemOverviewAE)
+import(anytime)
 import(httr)

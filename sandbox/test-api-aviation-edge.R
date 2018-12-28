@@ -19,3 +19,7 @@ report.from.cdg <- data.table::rbindlist(lapply(flights.from.cdg, makeTimetableI
 
 sample.flight <- report.to.lis[status == "active", flight.iata.number][2]
 getFlightTracker(flightIata=sample.flight,api.key = aviation.edge.api.key)
+
+
+sample.flight <- flights.from.lis[, flight.iata.number = "U23762"]
+getFlightTracker(flightIata="U23762",api.key = aviation.edge.api.key)

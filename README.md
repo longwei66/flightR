@@ -66,6 +66,12 @@ https://opensky-network.org/apidoc/#
 #### All State Vectors `flightR::getAllStateVectorsOSN()`
 Retrieve any state vector of the OpenSky for a given time in the last hour, could be limited in a geographical bounding box
 
+#### Own State Vector
+This API will not be implemented in this project
+
+#### Flights by Aircraft `flightR::getFlightsByAircraftOSN()`
+This API call retrieves flights for a particular aircraft within a certain time interval. Resulting flights departed and arrived within [begin, end]. If no flights are found for the given period, HTTP stats 404 - Not found is returned with an empty response body.
+
 #### Arrivals / Departure by Airport `flightR::getFlightsByAirportOSN()`
 
 Retrieve flights for a certain airport which arrived / departed within a given time interval.

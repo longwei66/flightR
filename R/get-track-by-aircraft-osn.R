@@ -40,10 +40,8 @@
 #'
 #' @examples 
 #' \dontrun{
-#' getTrackByAircraftOSN(icao.code = "LFPG",
-#'                        type = "arrival",
-#'                        from.time = "2018-01-29 00:00:00",
-#'                        to.time = "2018-01-29 01:00:00",
+#' getTrackByAircraftOSN(icao24 = "3c666b",
+#'                        time = 0",
 #'                        login = "login",
 #'                        password = "my pasword")
 getTrackByAircraftOSN <- function(icao24 = NULL,
@@ -70,7 +68,7 @@ getTrackByAircraftOSN <- function(icao24 = NULL,
         if(time == 0) {
                 url.time <- "&time=0"
         } else {
-                url.time <- paste0("&time=",as.integer(as.POSIXct(from.time)))
+                url.time <- paste0("&time=",as.integer(as.POSIXct(time)))
         }
         
         url <- paste0(url.base, url.icao24, url.time)

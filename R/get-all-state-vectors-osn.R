@@ -129,12 +129,7 @@ getAllStateVectorsOSN <- function(icao24 = NULL,
         ## -- function to set names, run it on all items
         answer$states <- lapply(answer$states, setVectorName, names = names.vector)        
 
-        ## -- function to replace NULL Values by NA values
-        replaceNullByNA <- function(x){
-                ## -- look for null values in the list and replace by NA
-                x[sapply(x, is.null)] <- NA
-                return(x)
-        }
+        ## -- replace NULL values by NA Values
         answer$states <- lapply(answer$states, replaceNullByNA)        
         
         
