@@ -41,8 +41,18 @@ Depends:
 Suggests: 
     testthat
 Collate: 
-    'get-osn-all-state-vectors.R'
-    'get-ae-flight-tracker.R'
-    'get-osn-flights-by-airports.R'
-    'get-ae-timetables.R'
     'ae-make-timetable-item-overview.R'
+    'dashboard-body-ui.R'
+    'dashboard-header-ui.R'
+    'dashboard-sidebar-ui.R'
+    'flightr-server.R'
+    'flightr-ui.R'
+    'flightr.R'
+    'get-ae-flight-tracker.R'
+    'get-ae-timetables.R'
+    'get-osn-all-state-vectors.R'
+    'get-osn-flights-by-aircraft.R'
+    'get-osn-flights-by-airports.R'
+    'get-osn-track-by-aircraft.R'
+    'replace-null-by-na.R'
+    'set-vector-names.R'

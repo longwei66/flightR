@@ -38,12 +38,8 @@
 #' @return answer a json object containing flight list with status and details. Status can be: (landed, scheduled, cancelled, active, incident, diverted, redirected, unknown)
 #' @export
 #'
-#' @examples 
-#' \dontrun{
-#' getAEtimetables(iata.code = "LIS",
-#'                              type = "arrival",
-#'                              api.key = "key.here)
-#' }
+#' @examples \dontrun{ getAEtimetables(iata.code = "LIS", type = "arrival", api.key = "key.here) }
+#' 
 getAEtimetables <- function(iata.code="JFK",
                             type="departure", #"arrival"
                             api.key){
