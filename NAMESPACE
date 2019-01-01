@@ -2,6 +2,7 @@
 
 export(AEmakeTimetableItemOverview)
 export(flightR)
+export(getAEairports)
 export(getAEflightTracker)
 export(getAEtimetables)
 export(getOSNallStateVectors)

@@ -48,6 +48,7 @@ Collate:
     'flightr-server.R'
     'flightr-ui.R'
     'flightr.R'
+    'get-ae-airports.R'
     'get-ae-flight-tracker.R'
     'get-ae-timetables.R'
     'get-osn-all-state-vectors.R'

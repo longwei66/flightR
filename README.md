@@ -46,6 +46,9 @@ https://aviation-edge.com/developers/
 
 > The API service provides the flight schedules and timetables of all airports and airlines around the world and maintains this for the clients in a central database, always accessible with the personal API key. The airport and airline timetables and schedules API is one of Aviation Edge’s core features. Making it easy for developers to provide their customers with actual airport departure and arrival times through API on their applications or websites. Our function is to gather and maintain the aviation data and format this into workable flight schedules and airport timetables for the clients so that they can focus on their core business of providing this information to their customers.
 
+#### Aiport API `flightR::getAEairports()`
+
+> Request For the entire database of airports, for information about a specific airport, you can search based on IATA code. For the airports based on the country code. 
 
 ## Opensky Network API
 
