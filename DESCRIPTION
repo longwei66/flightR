@@ -1,6 +1,6 @@
 Package: flightR
 Title: A package to interract with aviation-edge.com API
-Version: 0.0.0.0029
+Version: 0.0.0.0039
 Authors@R: 
     person(given = "Wei",
            family = "Long",
@@ -42,6 +42,7 @@ Suggests:
     testthat
 Collate: 
     'ae-make-timetable-item-overview.R'
+    'airports.worldwide.R'
     'dashboard-body-ui.R'
     'dashboard-header-ui.R'
     'dashboard-sidebar-ui.R'

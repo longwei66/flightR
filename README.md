@@ -48,7 +48,9 @@ https://aviation-edge.com/developers/
 
 #### Aiport API `flightR::getAEairports()`
 
-> Request For the entire database of airports, for information about a specific airport, you can search based on IATA code. For the airports based on the country code. 
+> World airport database with detailed data on every airport. The database can be downloaded or reached through API. It actually contains data about all aviation platforms, including private and public airports, airstrips, helipads, seaports and much more. It’s possible to download in excel, csv or sql format. Most of our clients initially download this as a stand-alone document or in combination with the other databases in a complete package. Aviation Edge has developed dedicated software to connect with our partners and airports directly to maintain the data actual. When downloading the database you will automatically receive mayor updates on the email used for registration. An other option is to connect to the API service which also allows you access to our other features which make use of the airport database.
+
+> Airport details: Name, IATA code ICAO code, Name translations, routes. Locational information: Name and ISO of country, IATA of nearby city, Latitude and Longitude coordinates, Timezone, GMT offset, geoname ID. Contact information: website and phone nr (when available)
 
 ## Opensky Network API
 
@@ -90,5 +92,6 @@ Retrieve the trajectory for a certain aircraft at a given time. The trajectory i
 ```
 devtools::document()
 devtools::load_all()
+devtools::use_data()
 devtools::test()
 ```
