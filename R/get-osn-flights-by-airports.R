@@ -32,6 +32,7 @@
 #'                        to.time = "2018-01-29 01:00:00",
 #'                        login = "login",
 #'                        password = "my pasword")
+#' }
 getOSNflightsByAirport <- function(icao.code="JFK",
                                     type = "arrival",
                                     from.time = "2018-12-24 20:00:00",

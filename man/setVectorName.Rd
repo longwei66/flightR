@@ -17,3 +17,6 @@ a named list
 \description{
 setVectorName
 }
+\examples{
+setVectorName(x = list(1,2,3,4), names = c("a","b","c","d"))
+}

@@ -92,6 +92,6 @@ Retrieve the trajectory for a certain aircraft at a given time. The trajectory i
 ```
 devtools::document()
 devtools::load_all()
-devtools::use_data()
+usethis::use_data()
 devtools::test()
 ```

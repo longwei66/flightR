@@ -4,7 +4,7 @@
 \alias{replaceNullByNA}
 \title{replaceNullByNA}
 \usage{
-replaceNullByNA(x)
+replaceNullByNA(x = NULL)
 }
 \arguments{
 \item{x}{a list}
@@ -14,4 +14,7 @@ x a list
 }
 \description{
 function to replace NULL Values in a list by NA values
+}
+\examples{
+replaceNullByNA(list("ab", "bc", NULL, "de"))
 }

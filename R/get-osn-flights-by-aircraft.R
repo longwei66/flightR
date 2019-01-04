@@ -23,11 +23,12 @@
 #'
 #' @examples 
 #' \dontrun{
-#' getOSNflightsByAircraft(icao24 = "3c666b",
-#'                        from.time = "2018-01-29 00:00:00",
-#'                        to.time = "2018-01-29 01:00:00",
-#'                        login = "login",
-#'                        password = "my pasword")
+#' getOSNflightsByAircraft(icao24 = '3c666b',
+#'                        from.time = '2018-01-29 00:00:00',
+#'                        to.time = '2018-01-29 01:00:00',
+#'                        login = 'login',
+#'                        password = 'my pasword')
+#' }
 getOSNflightsByAircraft <- function(icao24 = NULL,
                                     from.time = NULL,
                                     to.time = NULL,

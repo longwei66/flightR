@@ -41,9 +41,10 @@
 #' @examples 
 #' \dontrun{
 #' getOSNtrackByAircraft(icao24 = "3c666b",
-#'                        time = 0",
+#'                        time = "0",
 #'                        login = "login",
 #'                        password = "my pasword")
+#' }
 getOSNtrackByAircraft <- function(icao24 = NULL,
                                   time = 0,
                                   login = NULL,

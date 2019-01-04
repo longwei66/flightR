@@ -46,6 +46,10 @@ Take-off information: delay, the scheduled, estimated and actual time on runway 
 Airline: Name, IATA code and ICAO code.
 Flight: Number of Flight, IATA prefix with flight number and ICAO prefix with flight number.
 }
+\examples{
+\dontrun{ getAEtimetables(iata.code = 'LIS', type = 'arrival', api.key = 'key.here') }
+
+}
 \seealso{
 https://www.iata.org/publications/Pages/code-search.aspx
 }

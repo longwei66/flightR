@@ -33,6 +33,16 @@ Retrieve flights for a certain airport which arrived or departured within a give
 interval (begin, end). If no flights are found for the given period, 
 HTTP stats 404 - Not found is returned with an empty response body.
 }
+\examples{
+\dontrun{
+getOSNflightsByAirport(icao.code = "LFPG",
+                       type = "arrival",
+                       from.time = "2018-01-29 00:00:00",
+                       to.time = "2018-01-29 01:00:00",
+                       login = "login",
+                       password = "my pasword")
+}
+}
 \seealso{
 https://www.world-airport-codes.com/
 

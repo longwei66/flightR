@@ -1,37 +1,12 @@
-## =============================================================================
-##
-##              Web Scrapping of Airport Data
-##              -------------------------------------------
-##
-##              to support flightR package
-##
-##
-## =============================================================================
-
-
-## =============================================================================
-##      [0] load necessary libraries & configuration
-## =============================================================================
-
-## -- Needed libraries and system configuration
-library(XML)
-library(rvest)
-library(dplyr)
-library(lubridate)
-library(unpivotr)
-library(purrr)
-
-
-## -- source uri configuration
-airport.lists.base.url <- "https://en.wikipedia.org/wiki/List_of_airports_by_IATA_code:_"
-airport.lists.url <- paste0(airport.lists.base.url,LETTERS)
-
-## -- function to get airport list table
-#' getAirportsTable
+#' scrapWikipediaAirportsTable
 #' 
 #' get airport table data from wikipedia
 #'
-#' @param url 
+#' @param url a wikipedia airport table url
+#' @import XML
+#' @import rvest
+#' @import purrr
+#' @import data.table
 #'
 #' @return a data.table with IATA, ICAO, Airport name, location served, time
 #' DST and wikipedia url
@@ -39,8 +14,19 @@ airport.lists.url <- paste0(airport.lists.base.url,LETTERS)
 #' 
 #' @seealso https://en.wikipedia.org/wiki/List_of_airports_by_IATA_code:_B
 #'
-#' @examples
-getAirportsTable <- function(url){
+#' @examples 
+#' scrapWikipediaAirportsTable(
+#'    url = 'https://en.wikipedia.org/wiki/List_of_airports_by_IATA_code:_A'
+#'    )
+scrapWikipediaAirportsTable <- function(url){
+        
+        ## Test if login & password are provided
+        if(is.null(url)){
+                stop('A wikipedia url is required')
+        }
+        
+        
+        
         message(paste0('... scrapping : ',url))
         ## Get the information in the table as a data.table
         ## -- remove the lines of separation - XX -
@@ -64,16 +50,7 @@ getAirportsTable <- function(url){
         
         ## add both data
         result[ , url := paste0('https://en.wikipedia.org',links)]
+        result[ is.na(links), url := NA ]
         
         return(result)
 }
-
-## test on one page
-test <- getAirportsTable(airport.lists.url[2])
-
-
-## get all pages
-all.airports <- rbindlist(lapply(airport.lists.url, getAirportsTable), fill = TRUE)
-
-
-

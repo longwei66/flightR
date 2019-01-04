@@ -46,6 +46,14 @@ tracks within the same processing step. As such, it may be benificial to
 retrieve a list of flights with the API methods from above, and use these 
 results with the given time stamps to retrieve detailed track information.
 }
+\examples{
+\dontrun{
+getOSNtrackByAircraft(icao24 = "3c666b",
+                       time = "0",
+                       login = "login",
+                       password = "my pasword")
+}
+}
 \seealso{
 https://opensky-network.org/apidoc/rest.html#track-by-aircraft
 }

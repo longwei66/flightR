@@ -28,6 +28,15 @@ time interval. Resulting flights departed and arrived within (begin, end)
 If no flights are found for the given period, HTTP stats 404 - Not found is
 returned with an empty response body.
 }
+\examples{
+\dontrun{
+getOSNflightsByAircraft(icao24 = '3c666b',
+                       from.time = '2018-01-29 00:00:00',
+                       to.time = '2018-01-29 01:00:00',
+                       login = 'login',
+                       password = 'my pasword')
+}
+}
 \seealso{
 https://opensky-network.org/apidoc/rest.html#flights-by-aircraft
 }
