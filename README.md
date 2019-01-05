@@ -15,6 +15,9 @@ Currently two sources are used, the REST API of [Aviation Edge](https://aviation
 - flightaware API (status: pending) - https://fr.flightaware.com/commercial/firehose/firehose_documentation.rvt
 - OAG API (status: pending) - https://www.oag.com/flightview/flight-status-data-api
 
+### Included data
+
+- list of airports resulting of combined data from http://ourairports.com/data/, https://en.wikipedia.org/wiki/List_of_airports_by_IATA_and_ICAO_code, https://datahub.io )
 
 
 ### How to install flightR

@@ -4,7 +4,7 @@
 \alias{dms2dd}
 \title{dms2dd}
 \usage{
-dms2dd(x)
+dms2dd(x = NULL)
 }
 \arguments{
 \item{x}{location as "120°37′10″E"}
