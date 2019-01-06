@@ -1,6 +1,6 @@
 Package: flightR
 Title: A package to interract with aviation-edge.com API
-Version: 0.0.0.0039
+Version: 0.0.0.0049
 Authors@R: 
     person(given = "Wei",
            family = "Long",
@@ -39,12 +39,13 @@ RoxygenNote: 6.1.1
 Depends:
     httr
 Suggests: 
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
 Collate: 
     'ae-make-timetable-item-overview.R'
     'airports.worldwide.R'
     'countries.R'
-    'countries.iso.code.R'
     'dashboard-body-ui.R'
     'dashboard-header-ui.R'
     'dashboard-sidebar-ui.R'
@@ -52,6 +53,7 @@ Collate:
     'flightr-server.R'
     'flightr-ui.R'
     'flightr.R'
+    'get-ae-aircrafts.R'
     'get-ae-airports.R'
     'get-ae-flight-tracker.R'
     'get-ae-timetables.R'
@@ -63,3 +65,4 @@ Collate:
     'scrap-wikipedia-airports-details.R'
     'scrap-wikipedia-airports-table.R'
     'set-vector-names.R'
+VignetteBuilder: knitr

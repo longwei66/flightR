@@ -7,6 +7,7 @@
 ##
 ##
 ## =============================================================================
+devtools::load_all()
 
 
 ## =============================================================================
@@ -28,13 +29,15 @@ all.airports <- rbindlist(lapply(airport.lists.url, scrapWikipediaAirportsTable)
 ## =============================================================================
 
 ## -- test on one airport
-url <- test[8, url]
+url <- test[8, airport.wikipedia.url]
 scrapWikipediaAirportsDetails(url = url)
 
 ## -- test on one airport table page
-all.airports.geo <- lapply(all.airports[, url], scrapWikipediaAirportsDetails)
+all.airports.geo <- lapply(all.airports[, airport.wikipedia.url], scrapWikipediaAirportsDetails)
 all.airports.geo <- data.table::rbindlist(all.airports.geo)
 
 ## -- add geo location to all.aiports
-all.airports <- cbind(all.airports, all.airports.geo)
-all.airports[  , Country := gsub(pattern = "^(.*),[1-9]{0,1} (.*)$", replacement = "\\2", x = `Location served`) ]
+airports <- cbind(all.airports, all.airports.geo)
+save(airports, file = "./data/airports.Rda")
+
+

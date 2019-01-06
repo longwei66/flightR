@@ -3,7 +3,7 @@
 #' get airport table data from wikipedia
 #'
 #' @param url a wikipedia airport table url
-#' @import XML
+#' @import xml2
 #' @import rvest
 #' @import purrr
 #' @import data.table
@@ -51,6 +51,34 @@ scrapWikipediaAirportsTable <- function(url){
         ## add both data
         result[ , url := paste0('https://en.wikipedia.org',links)]
         result[ is.na(links), url := NA ]
+        
+        if(length(names(result)) == 7) {
+                names(result) <- c("airport.iata",
+                                   "airport.icao",
+                                   "airport.name",
+                                   "location.served",
+                                   "airport.time",
+                                   "airport.dst",
+                                   "airport.wikipedia.url")
+                result[  , airport.country := gsub(pattern = "^(.*),[1-9]{0,1} (.*)$", replacement = "\\2", x = location.served) ]
+                
+                result <- result[ , .(airport.iata, airport.icao, airport.name,
+                                      location.served, airport.country,
+                                      airport.time, airport.dst, airport.wikipedia.url)
+                                  ]
+        } else {
+                names(result) <- c("airport.iata",
+                                   "airport.icao",
+                                   "airport.name",
+                                   "location.served",
+                                   "airport.wikipedia.url")
+                result[  , airport.country := gsub(pattern = "^(.*),[1-9]{0,1} (.*)$", replacement = "\\2", x = location.served) ]
+                
+                result <- result[ , .(airport.iata, airport.icao, airport.name,
+                                      location.served, airport.country,
+                                      airport.wikipedia.url)
+                                  ]
+        }
         
         return(result)
 }

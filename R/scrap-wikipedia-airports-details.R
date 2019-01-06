@@ -3,7 +3,7 @@
 #' @param url an airport wikipedia ura
 #'
 #' @return list of airport details
-#' @import XML
+#' @import xml2
 #' @import rvest
 #'
 #' @examples
