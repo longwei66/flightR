@@ -1,6 +1,6 @@
 Package: flightR
 Title: A package to interract with aviation-edge.com API
-Version: 0.0.0.0049
+Version: 0.0.0.0059
 Authors@R: 
     person(given = "Wei",
            family = "Long",
@@ -44,6 +44,7 @@ Suggests:
     rmarkdown
 Collate: 
     'ae-make-timetable-item-overview.R'
+    'airports.R'
     'airports.worldwide.R'
     'countries.R'
     'dashboard-body-ui.R'
@@ -54,6 +55,7 @@ Collate:
     'flightr-ui.R'
     'flightr.R'
     'get-ae-aircrafts.R'
+    'get-ae-airlines.R'
     'get-ae-airports.R'
     'get-ae-flight-tracker.R'
     'get-ae-timetables.R'

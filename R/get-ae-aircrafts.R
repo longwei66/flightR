@@ -53,9 +53,27 @@
 #'
 #' @examples 
 #' 
-#' Details about ...
+#' All aicrafts
 #' \dontrun{ 
 #' getAEaircrafts(
+#'               api.key = 'key.here') 
+#' }
+#' Information about a specific airplane by registration number
+#' \dontrun{ 
+#' getAEaircrafts(
+#'               aircraft.registration.number = 'HB-JVE',
+#'               api.key = 'key.here') 
+#' }
+#' Information about a specific airplane by hex ICAO
+#' \dontrun{ 
+#' getAEaircrafts(
+#'               aircraft.hex.icao = '4B19EA',
+#'               api.key = 'key.here') 
+#' }
+#'  information about airplanes of a specific airline, by  IATA code. 
+#' \dontrun{ 
+#' getAEaircrafts(
+#'               airline.iata = '0B',
 #'               api.key = 'key.here') 
 #' }
 #' 
