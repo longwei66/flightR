@@ -1,6 +1,6 @@
 Package: flightR
 Title: A package to interract with aviation-edge.com API
-Version: 0.0.0.0069
+Version: 0.0.0.0079
 Authors@R: 
     person(given = "Wei",
            family = "Long",
@@ -58,6 +58,7 @@ Collate:
     'get-ae-airlines.R'
     'get-ae-airports.R'
     'get-ae-cities.R'
+    'get-ae-countries.R'
     'get-ae-flight-tracker.R'
     'get-ae-timetables.R'
     'get-osn-all-state-vectors.R'

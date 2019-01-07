@@ -74,6 +74,13 @@ https://aviation-edge.com/developers/
 
 > Data included in City Database : City basic: Name, IATA, ISO-2 related country / Location data: Latitude, Longitude, Timezone, GMT offset, Geoname ID / Translations: Translations of the city name (when available).
 
+
+#### Countries API `flightR::getAEcountries()`
+
+> The country database contains all countries and regions in the world. This global country database can be downloaded as an excel, csv or sql file or you can connect to it through our API system. Using the API subscription, clients will automatically receive the updates as we continue to improve our data. Clients who choose to download the data will receive mayor updates automatically by mail. Download the free country database sample to check if it contains the information you are looking for and then decide either to download or connect to the API. The central focus for Aviation Edge is to gather data and keep it actual so that the clients are able to focus on using the data in their software.
+
+> Data included in Country Database : Country basic: Name and Name translations, IATA, ISO-2, ISO-3, Numeric / Currency: Name of currency and Code of currency / Location data: Continent, capital, neighbours / Other: Prefix of phones, Popularity, Languages spoken.
+
 ## Opensky Network API
 
 ### Overview
