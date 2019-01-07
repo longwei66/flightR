@@ -50,11 +50,29 @@ https://aviation-edge.com/developers/
 
 > The API service provides the flight schedules and timetables of all airports and airlines around the world and maintains this for the clients in a central database, always accessible with the personal API key. The airport and airline timetables and schedules API is one of Aviation Edge’s core features. Making it easy for developers to provide their customers with actual airport departure and arrival times through API on their applications or websites. Our function is to gather and maintain the aviation data and format this into workable flight schedules and airport timetables for the clients so that they can focus on their core business of providing this information to their customers.
 
-#### Aiport API `flightR::getAEairports()`
+#### Airport API `flightR::getAEairports()`
 
 > World airport database with detailed data on every airport. The database can be downloaded or reached through API. It actually contains data about all aviation platforms, including private and public airports, airstrips, helipads, seaports and much more. It’s possible to download in excel, csv or sql format. Most of our clients initially download this as a stand-alone document or in combination with the other databases in a complete package. Aviation Edge has developed dedicated software to connect with our partners and airports directly to maintain the data actual. When downloading the database you will automatically receive mayor updates on the email used for registration. An other option is to connect to the API service which also allows you access to our other features which make use of the airport database.
 
 > Airport details: Name, IATA code ICAO code, Name translations, routes. Locational information: Name and ISO of country, IATA of nearby city, Latitude and Longitude coordinates, Timezone, GMT offset, geoname ID. Contact information: website and phone nr (when available)
+
+#### Airline API `flightR::getAEairlines()`
+
+> A complete database of all the airlines in the world. Used often in combination with other API solutions such as the flight tracker, airline schedules and routes. The database is a foundation for a wide range of software applications. There are two ways to obtain the airline database, either by downloading it in excel, csv or sql format or by connecting to the API service which Aviation Edge provides. When you download the database individually or in combination with other databases, you will receive important updates automatically by mail and you can also access your account at any time to download the database. The other option through API will allow you to develop a software to automatically check for updates.
+
+> Data included in Airline Database download : Codes: Aside from the airline Name, the database includes IATA code and IATA prefix and IATA accounting code, ICAO code / Related data: IATA code of the Hub airport of the airline, name and ISO code of country / Airline details: Status of airline (active, closed, etc), Type of airline, Founding year, Fleet size, average age of fleet / Contact information: Website, twitter, facebook, phone nr (when available)
+
+#### Aircrafts API `flightR::getAEaircrafts()`
+
+> Aviation Edge maintains an aircraft registry in the form of a database of all aircraft types which can be downloaded in excel, csv or sql format. It is also possible to connect to this database through the API service. The database is used internally for flight tracking and by the clients for a wide range of software applications. By downloading the airplane database you will receive support and mayor updates for the period of one year. The data we provide saves clients a lot of time of manually aggregating the data from various sources. On top of this we have developed software to control the validity of the data where possible. This allows clients to focus on their core business while relying on our aviation database.
+
+> Data included in Aircraft Database : Aircraft basic: Name, model, registration number, IATA typecode, ICAO24 hex code, IATA short and long / Historic data: Date of rollout, first flight, delivery and registration of aircraft / Production data: Construction number, production line, airplane series / Owner information: Owner of plane, airline IATA and ICAO code / Aircraft details: Classes, seats, Amount of engines, age of airplane and status.
+
+#### Cities API `flightR::getAEcities()`
+
+> The database contains all cities in the world with their aviation and travel related data. It is possible to download the city database in excel, csv or sql format so that it functions for all of our clients. The other way to reach this data is through our API system which will automatically be updated with new information as we aggregate them. Many of the clients initially download the city database followed by signing up to obtain their own API key. There is a free sample available to verify if the data contains what you are looking for before committing to it. When downloading you will receive updates of any mayor changes automatically by mail.
+
+> Data included in City Database : City basic: Name, IATA, ISO-2 related country / Location data: Latitude, Longitude, Timezone, GMT offset, Geoname ID / Translations: Translations of the city name (when available).
 
 ## Opensky Network API
 
